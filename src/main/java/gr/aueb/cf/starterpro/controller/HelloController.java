@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloController {
 
     @GetMapping("/hello")                                    // It means that this method provides services only for "get-type" requests at the localhost:8080/starter/hello".
-    public String hello(Model model) {                       // Model = spring - interface as "transport-vehicle" of data to the web page! Controller = background code. Every page is controlled by a controller! The controller returns the page and implements the data in it.
+    public String hello(Model model) {                       // Model = spring - interface as "vehicle" of data-transport to the HTML template! Controller = background code. Every HTML template is controlled by a controller! The controller returns the HTML template and implements the data in it.
         model.addAttribute("message", "Hello World!");       // We give a nickname -> "message" of data (tagging) and after that this message becomes accessible through the page "${message}". The data that it carries can be anything! Data ("Hello World!") -> called presentational data.
         return "index";
     }
